@@ -198,7 +198,7 @@ $(".addtask").on('click', () => {
   if (input_value !== ""  ) {
     input.value = "";
     // push value into create function
-    Task.create(input_value, inputdate);
+    Task.create(input_value);
     Task.displayTask();
   } else {
     Task.showAlertMessage("no task added ", ".alertMsg")
