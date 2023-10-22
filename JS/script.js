@@ -26,7 +26,7 @@ function searchTaskByName() {
        document.querySelector('tbody').children[i].classList.add('show');
     } else {
       document.querySelector('tbody').children[i].classList.replace('show', 'hide');
-      tasks_container.innerHTML = `<p class="text-center search-box text-sm md:text-md border-1 shadow-md  " colspan=4 rowspan=2 >NOT EXIST</p>`
+      // tasks_container.innerHTML = `<p class="text-center search-box text-sm md:text-md border-1 shadow-md  " colspan=4 rowspan=2 >NOT EXIST</p>`
     }
     (value === '' ? showAllTodos() : '') // if value of input search is empty show all taks 
   }
@@ -198,7 +198,7 @@ $(".addtask").on('click', () => {
   if (input_value !== ""  ) {
     input.value = "";
     // push value into create function
-    Task.create(input_value, inputdate);
+    Task.create(input_value);
     Task.displayTask();
   } else {
     Task.showAlertMessage("no task added ", ".alertMsg")
